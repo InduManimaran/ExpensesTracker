@@ -1,8 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
 <?php
-$link=mysql_connect('localhost','admin','password')
-$db = mysql_select_db("Expenses", $link); // Selecting Database from Server
+$link=mysql_connect('epiz_22073562_expenses','admin','password')
+$db = mysql_select_db("Expenses", $link); 
 
-if(isset($_POST['formSubmit'])){ // Fetching variables of the form which travels in URL
+if(isset($_POST['formSubmit'])){ 
 	$Date = $_POST['Date'];
     $Value = $_POST['Value'];
     $Reason = $_POST['Reason'];
@@ -14,5 +17,9 @@ else{
 echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
 }
 }
-mysql_close($connection); // 
+mysql_close($connection);
 ?>
+
+
+</body>
+</html>

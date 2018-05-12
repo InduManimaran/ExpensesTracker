@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+</head>
+<body>
+
+<h2>Expenses</h2>
+
+<form name="view_expenses" method="post" id="expenses_view" action="view_expenses.php">
+  <br>Choose Date:<input type="date" name="Date" value=" ">
+  <br><input type="submit" name="formsubmit" value="submit">
+</form> 
+
+<?php
+if(isset($_POST['submit'])) 
+{ 
+	$link=mysql_connect('epiz_22073562_expenses','admin','password')
+	$db = mysql_select_db("Expenses", $link); 
+
+    $name = $_POST['name'];
+    echo "User Has submitted the form and entered this name : <b> $name </b>";
+    echo "<br>You can use the following form again to enter a new name."; 
+}
+?>
+
+</body>
+</html>
+
