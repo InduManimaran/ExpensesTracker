@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript">
+   
+function submit (form) {
+   date= form.Date;
+   Value= form.Value;
+   Reason = form.Reason;
+
+   alert (date+value + Count);
+
+
+}
+</script> 
+
+<body>
+
+<h2>Expenses</h2>
+
+<form name="expenses" method="post" id="expenses-entry" action="index.php">
+  <br>Date:<input type="date" name="Date" value=" ">
+  <br>Value:<input type="number" name="Value" value=" " step="0.01">
+  <br>Reason:<input type="text" name="Reason" value=" ">
+  <br><input type="submit" name="formsubmit" value="submit">
+
+</form> 
+
+
+
+</body>
+</html>
+
+<?php
+if($_POST['formSubmit'] == "Submit")
+
+  {
+    $varDate = $_POST['Date'];
+    $varValue = $_POST['Value'];
+    $varReason = $_POST['Reason'];
+    $varVat = $varValue * 0.20;
+  }
+
+
+?>
