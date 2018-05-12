@@ -1,0 +1,11 @@
+
+CREATE TABLE IF NOT EXISTS `Expenses` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `value` float NOT NULL,
+  `reason` varchar(150) NOT NULL,
+  `vat` float NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_2` (`id`),
+  KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;

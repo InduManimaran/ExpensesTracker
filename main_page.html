@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<script type="text/javascript">
-   
-function submit (form) {
-   date= form.Date;
-   Value= form.Value;
-   Reason = form.Reason;
-
-   alert (date+value + Count);
-
-
-}
-</script> 
-
 <body>
 
 <h2>Expenses</h2>
@@ -31,15 +18,3 @@ function submit (form) {
 </body>
 </html>
 
-<?php
-if($_POST['formSubmit'] == "Submit")
-
-  {
-    $varDate = $_POST['Date'];
-    $varValue = $_POST['Value'];
-    $varReason = $_POST['Reason'];
-    $varVat = $varValue * 0.20;
-  }
-
-
-?>
