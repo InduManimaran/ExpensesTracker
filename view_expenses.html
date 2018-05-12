@@ -19,7 +19,7 @@
 <?php
 if(isset($_POST['submit'])) 
 { 
-	$link=mysql_connect('epiz_22073562_expenses','admin','password')
+	$link=mysql_connect('epiz_22073562_expenses','epiz_22073562','password')
 	$db = mysql_select_db("Expenses", $link); 
 
 	$query = mysql_query("Select * from Expenses where 'date'='$date'");

@@ -2,7 +2,7 @@
 <html>
 <body>
 <?php
-$link=mysql_connect('epiz_22073562_expenses','admin','password')
+$link=mysql_connect('epiz_22073562_expenses','epiz_22073562','password')
 $db = mysql_select_db("Expenses", $link); 
 
 if(isset($_POST['formSubmit'])){ 

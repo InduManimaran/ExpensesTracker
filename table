@@ -1,11 +1,18 @@
-
 CREATE TABLE IF NOT EXISTS `Expenses` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Uid` int(11) NOT NULL,
   `date` date NOT NULL,
   `value` float NOT NULL,
   `reason` varchar(150) NOT NULL,
   `vat` float NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id_2` (`id`),
-  KEY `id` (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`,`Uid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+CREATE TABLE  `epiz_22073562_expenses`.`Login_table` (
+`uid` INT NOT NULL ,
+`f_name` VARCHAR( 50 ) NOT NULL ,
+`l_name` VARCHAR( 50 ) NOT NULL ,
+`email` VARCHAR( 25 ) NOT NULL ,
+`password` VARCHAR( 15 ) NOT NULL ,
+PRIMARY KEY (  `uid` )
+) ENGINE = MYISAM ;
